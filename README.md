@@ -12,13 +12,15 @@
 
 ## Planning 
 Reading the acceptance critiria I have decided that:
-* This will be a single-class program.
+* This will be a single-class program, as it needs to have the ability to store the data in memory (probably in an instance of a BankAccount class).
 * The programm will be written in JavaScript and will be tested with Jest.
+* The class will be storing the depositing and withdrawal actions within an object.
+* The class will be have at least 3 methods(deposit(add),withdraw(subtrack), viewStatement(read))
 
 ### Next steps are:
 *writing the class recipe*
-1. Writting User Stories
-2. Creating a class diagram
+1. Writting User Stories based on specifications.
+2. Creating a class diagram using the nouns and verbs extracted from the user stories.
 3. Create an Example as a unit Test
 3a. encode the example
 3b. implement the behaviour (red-green-refactor)
@@ -70,4 +72,10 @@ note about format?
 Note about how to exit Node
 -->
 
+#### screenshots of criteria being met
+
 ### 3. Run the tests
+
+<!-- edge cases that were taken into consideration -->
+
+#### screenshots of the test coverage
