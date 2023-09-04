@@ -1,10 +1,11 @@
 class BankAccount {
-    static statement = [];
+    #statement = [];
     
     printStatement() {
-        return "date || credit || debit || balance"
+        return `date || credit || debit || balance`;
     }
 
+    
 };
 
 module.exports = BankAccount;
