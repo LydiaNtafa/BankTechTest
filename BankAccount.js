@@ -1,6 +1,8 @@
 class BankAccount {
-    constructor () {
-        this.statement = [];
+    static statement = [];
+    
+    printStatement() {
+        return "date || credit || debit || balance"
     }
 
 };
