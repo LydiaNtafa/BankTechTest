@@ -1,10 +1,9 @@
 # Bank Tech Test - Lydia Ntafa
 
 <!-- TODO before submitting-->
-- [] Planning/ approach
+- [x] Planning/ approach
     - Design Recipe
     - Class Diagram
-    - Sequence Diagram (?)
 - [] How to run the code
 - [] How to run the tests
 - [] screenshots of criteria being met
@@ -18,9 +17,9 @@ Reading the acceptance critiria I have decided that:
 * The class will be have at least 3 methods(deposit(add),withdraw(subtrack), viewStatement(read))
 
 ### Next steps are:
-*writing the class recipe*
+*Writing the [class recipe](designFiles/classRecipe.md) *
 1. Writting User Stories based on specifications.
-2. Creating a class diagram using the nouns and verbs extracted from the user stories.
+2. Creating a [class diagram](designFiles/BankAccountClassDiagram.png) using the nouns and verbs extracted from the user stories.
 3. Create an Example as a unit Test
 3a. encode the example
 3b. implement the behaviour (red-green-refactor)
