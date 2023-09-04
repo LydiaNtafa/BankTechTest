@@ -1,0 +1,15 @@
+{
+  "name": "bank-tech-test",
+  "version": "1.0.0",
+  "description": "<!-- TODO before submitting--> - [x] Planning/ approach     - Design Recipe     - Class Diagram - [] How to run the code - [] How to run the tests - [] screenshots of criteria being met - [] screenshots of project running - [] add Table of Contents with links",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.6.4"
+  }
+}

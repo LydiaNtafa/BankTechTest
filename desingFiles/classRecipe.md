@@ -17,3 +17,5 @@ verbs: save/deposit, use/withdraw, keep track, see
 # Class Diagram
 ! [Class Diagram] (BankAccountClassDiagram.png)
 
+# Examples as Test
+
