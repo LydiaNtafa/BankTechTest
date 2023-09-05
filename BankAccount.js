@@ -26,7 +26,7 @@ class BankAccount {
         if (this.#statement.length === 0){
             return header
         }
-        return header+`\n`+`${this.#statement}`;
+        return header+`\n`+`${this.#statement.reverse().join('\n')}`;
     }
 
     deposit(amount) {
@@ -35,7 +35,8 @@ class BankAccount {
 
     withdrawal(amount){
         if (amount > this.#balance) {
-            return `Cannot complete this transaction due to insufficient balance. Account balance: ${this.#balance.toFixed(2)}`
+            return `Cannot complete this transaction due to insufficient balance.`+
+            ` Account balance: ${this.#balance.toFixed(2)}`
         }
         return this.#createTransaction('withdrawal', amount);
     }

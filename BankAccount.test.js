@@ -9,7 +9,7 @@ describe('Bank Account', () => {
     });
     
     describe('deposit', () => {
-        // needs edge cases and intergration tests
+        // needs edge cases 
         it('allows the user to make a deposit of 1000', () => {
             const Account = new BankAccount();
             expect(Account.deposit(1000)).toStrictEqual("Transaction complete. New account balance: 1000.00")
@@ -29,7 +29,7 @@ describe('Bank Account', () => {
     })
     
     describe('withdrawal', () => {
-        // needs edge cases and more intergation tests
+        // needs edge cases
         it('does not allow withdrawals if balance is 0', () => {
             const Account = new BankAccount();
             expect(Account.withdrawal(1000)).toStrictEqual("Cannot complete this transaction due to insufficient balance. Account balance: 0.00")
@@ -40,8 +40,18 @@ describe('Bank Account', () => {
             Account.deposit(1000);
             expect(Account.withdrawal(100)).toStrictEqual('Transaction complete. New account balance: 900.00')
         });
+
     })
     
+    it('shows a deposit and a withdrawal on the printed statement', () => {
+        const Account = new BankAccount();
+        Account.deposit(1200);
+        Account.withdrawal(500);
+        todaysDate = (new Date()).toLocaleDateString('en-GB');
+        expect(Account.printStatement()).toStrictEqual(`date || credit || debit || balance\n`+
+        `${todaysDate} || 500.00 || || 700.00\n`+
+        `${todaysDate} || || 1200.00 || 1200.00`)
+    });
 
 });
 

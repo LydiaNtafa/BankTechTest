@@ -47,6 +47,7 @@ and will receive an error message "Cannot complete this transaction due to insuf
 ```
 The user can a withdrawl if their balance is sufficient
 They will receive a confirmation message "Transaction complete. New account balance: <balance>"
+*the confirmation message is an assumption on dev's part and can easily be changed/deleted*
 ```
 
 # Examples as Intergation Tests
@@ -54,4 +55,10 @@ They will receive a confirmation message "Transaction complete. New account bala
 When a new account is created 
 the user can make a deposit
 the deposit will be recorded on the statement when printed
+```
+
+```
+When a new account is created 
+the user can make a deposit and a withdrawal
+the deposit and the withdrawal will be recorded on the statement when printed
 ```
