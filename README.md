@@ -1,16 +1,6 @@
 # Bank Tech Test - Lydia Ntafa
 
-<!-- TODO before submitting-->
-- [x] Planning/ approach
-    - Design Recipe
-    - Class Diagram
-- [] How to run the code
-- [] How to run the tests
-- [] screenshots of criteria being met
-- [] screenshots of project running
-- [] add Table of Contents with links
-
-## Approaching the task and planning the program 
+## Approaching the task and planning the program:
 Reading the acceptance critiria I have decided that:
 * This will be a single-class program, as it needs to have the ability to store the data in memory (probably in an instance of a BankAccount class).
 * The programm will be written in JavaScript and will be tested with Jest.
@@ -82,7 +72,7 @@ $ npm install -g jest
 ## How to Run this Programm and its Tests 
 
 ### 1. Run the Program
-1. Your should now be able to type node inside your terminal, to launch the node REPL:
+1. Your should now be able to type *node* inside your terminal, to launch the node REPL:
 ```
 $ node
 Welcome to Node.js v16.6.0.
@@ -98,18 +88,30 @@ const BankAccount = require("./BankAccount");
 const Account1 = new BankAccount();
 const Account2 = new BankAccount();
 ```
-#### Avaiable functions (withdraw, deposit, viewStatement)
-note about format?
+#### Available functions (withdraw(amount), deposit(amount), viewStatement())
+for example:
+```
+Account2.deposit(100.6);
+Account2.printStatement()
+```
+OR
+```
+Account1.deposit(1000);
+Account1.deposit(2000);
+Account1.withdraw(500);
+Account1.printStatement()
+```
 
-Note about how to exit Node
+[Screenshot of Criteria Being Met](designFiles/Screenshot-criteria-met.png)
 
-
-#### screenshots of criteria being met
+4. type .exit to exit the REPL
 
 ### 2. Run the tests
+1. Make sure you are in the main directory of the Project
+2. Run *jest* inside your terminal
 ```
 jest
 ```
-<!-- edge cases that were taken into consideration -->
 
-#### screenshots of the test coverage
+
+[screenshot of the test coverage]
