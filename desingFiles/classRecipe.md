@@ -17,7 +17,7 @@ verbs: save/deposit, use/withdraw, keep track, print
 # Class Diagram
 ! [Class Diagram] (BankAccountDiagram.png)
 
-# Examples as Test
+# Examples as Unit Tests
 ```
 When a new account is created
 the bank statement should be an empty array
@@ -27,10 +27,18 @@ the bank statement should be an empty array
 When a new account is created 
 and the printed statement should look like this
 date || credit || debit || balance
+*this is an assumption on dev's part that this how the empty statement will be displayed*
 ```
 
 ```
 When a new account is created 
 the user can make a deposit
-and receive a confirmation message with the deposited amount, and the new account balance
+and receive a confirmation message with the new account balance
+```
+
+# Examples as Intergation Tests
+```
+When a new account is created 
+the user can make a deposit
+the deposit will be recorded on the statement when printed
 ```
