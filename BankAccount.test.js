@@ -19,7 +19,8 @@ describe('Bank Account', () => {
     it('shows a deposit on the printed statement', () => {
         const Account = new BankAccount();
         Account.deposit(1000);
-        expect(Account.printStatement()).toStrictEqual(`date || credit || debit || balance\n`+`05/10/2023 || || 1000.00 || 1000.00`)
+        todaysDate = (new Date()).toLocaleDateString('en-GB');
+        expect(Account.printStatement()).toStrictEqual(`date || credit || debit || balance\n`+`${todaysDate} || || 1000.00 || 1000.00`)
     });
 });
 

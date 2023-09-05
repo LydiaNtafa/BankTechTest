@@ -1,6 +1,7 @@
 class BankAccount {
     #statement = [];
     #balance = 0;
+    
 
     #balanceCalculation(amount) {
         this.#balance = amount + this.#balance;
@@ -15,12 +16,12 @@ class BankAccount {
 
     deposit(amount) {
         this.#balanceCalculation(amount)
-        const action = `05/10/2023 || || ${amount.toFixed(2)} || ${this.#balance.toFixed(2)}`;
+        var currentDate = (new Date()).toLocaleDateString('en-GB')
+        const action = `${currentDate} || || ${amount.toFixed(2)} || ${this.#balance.toFixed(2)}`;
         this.#statement.push(action);
         return `Transaction complete. New account balance: ${this.#balance.toFixed(2)}`
     }
 
-    
 };
 
 module.exports = BankAccount;
