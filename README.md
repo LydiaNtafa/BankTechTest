@@ -21,12 +21,12 @@ Reading the acceptance critiria I have decided that:
 *Writing the [class recipe](designFiles/classRecipe.md) *
 1. Writting User Stories based on specifications.
 2. Creating a [class diagram](designFiles/BankAccountClassDiagram.png) using the nouns and verbs extracted from the user stories.
-3. Create an [Examples as Unit Tests](designFiles/classRecipe.md#Examples-as-Test)
+3. Create an [Examples as Unit Tests](designFiles/classRecipe.md#Examples-as-Unit-Tests)
 - 3a. create an example as a unit test
 - 3b. encode the example
 - 3c. implement the behaviour (red-green-refactor)
 - 3d. go back to 3a until all criteria and cases are met
-4.  Create Examples as intergation Tests
+4.  Create [Examples as intergation Tests](designFiles/classRecipe.md#Examples-as-Intergation-Tests)
 - 4a. create an example as an intergration test
 - 4b. encode the example
 - 4c. implement the behaviour (red-green-refactor)

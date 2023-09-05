@@ -27,13 +27,14 @@ the bank statement should be an empty array
 When a new account is created 
 and the printed statement should look like this
 date || credit || debit || balance
-*this is an assumption on dev's part that this how the empty statement will be displayed*
+*this is an assumption on dev's part that this how the empty statement will be displayed, it can easily be changed/deleted*
 ```
 
 ```
 When a new account is created 
 the user can make a deposit
 and receive a confirmation message with the new account balance
+*confirmation message is an assumption on dev's part and can easily be changed/deleted*
 ```
 
 # Examples as Intergation Tests
