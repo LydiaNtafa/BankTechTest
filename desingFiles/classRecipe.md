@@ -15,7 +15,7 @@ nouns: money, bank account, bank statement, deposits, withdraws, dates, amount, 
 verbs: save/deposit, use/withdraw, keep track, print
 
 # Class Diagram
-! [Class Diagram] (BankAccountClassDiagram.png)
+! [Class Diagram] (BankAccountDiagram.png)
 
 # Examples as Test
 ```
@@ -30,4 +30,7 @@ date || credit || debit || balance
 ```
 
 ```
+When a new account is created 
+the user can make a deposit
+and receive a confirmation message with the deposited amount, and the new account balance
 ```
