@@ -44,6 +44,11 @@ and will receive an error message "Cannot complete this transaction due to insuf
 *the error message is an assumption on dev's part and can easily be changed/deleted*
 ```
 
+```
+The user can a withdrawl if their balance is sufficient
+They will receive a confirmation message "Transaction complete. New account balance: <balance>"
+```
+
 # Examples as Intergation Tests
 ```
 When a new account is created 

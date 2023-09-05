@@ -23,7 +23,12 @@ class BankAccount {
     }
 
     withdrawal(amount){
-        return `Cannot complete this transaction due to insufficient balance. Account balance: ${this.#balance.toFixed(2)}`
+        if (amount > this.#balance) {
+            return `Cannot complete this transaction due to insufficient balance. Account balance: ${this.#balance.toFixed(2)}`
+        }
+        this.#balanceCalculation(-amount)
+        return `Transaction complete. New account balance: ${this.#balance.toFixed(2)}`
+        
     }
 
 };
