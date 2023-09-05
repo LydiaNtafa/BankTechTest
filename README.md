@@ -54,40 +54,32 @@ wrong, have a look at the [troubleshooting
 section](https://github.com/nvm-sh/nvm#troubleshooting-on-macos) or reach out to someone
 for help.
 
-
-### 2. Initialise Depedencies
-Make sure you are on the main project directory.
-```bash
-# Initialise the NPM project (this will create a file package.json)
-npm init -y
-
-# Add the jest package to our project (this will update package.json and package-lock.json)
-npm add jest
-
-# Also install jest "globally" (this is so we can run the `jest` command)
-npm install -g jest
-```
-
 ## How to Run this Programm and its Tests 
 
 ### 1. Run the Program
-1. Your should now be able to type `node` inside your terminal, to launch the node REPL:
+#### 1. Clone this repository and enter the main directory
+```
+git clone https://github.com/LydiaNtafa/BankTechTest.git
+cd 
+```
+
+#### 2. Your should now be able to type `node` inside your terminal, to launch the node REPL:
 ```
 node
 Welcome to Node.js v16.6.0.
 Type ".help" for more information.
 > 
 ```
-2. import the class by typing:
+#### 3. import the class by typing:
 ```
 const BankAccount = require("./BankAccount");
 ```
-3. now you can create new bank accounts. For example:
+#### 4. now you can create new bank accounts. For example:
 ```
 const Account1 = new BankAccount();
 const Account2 = new BankAccount();
 ```
-#### Available functions (withdraw(amount), deposit(amount), viewStatement())
+##### Available functions (withdraw(amount), deposit(amount), viewStatement())
 for example:
 ```
 Account2.deposit(100.6);
@@ -100,14 +92,27 @@ Account1.deposit(2000);
 Account1.withdraw(500);
 Account1.printStatement()
 ```
-4. type `.exit` to exit the REPL
+#### 5. type `.exit` to exit the REPL
 
 Here you can find a [Screenshot of Criteria Being Met](desingFiles/Screenshot-criteria-met.png)
 
 
 ### 2. Run the tests
-1. Make sure you are in the main directory of the Project
-2. Run *jest* inside your terminal
+#### 1. Make sure you are in the main directory of the Project
+
+#### 2. Initialise Depedencies
+Make sure you are on the main project directory.
+```bash
+# Initialise the NPM project (this will create a file package.json)
+npm init -y
+
+# Add the jest package to our project (this will update package.json and package-lock.json)
+npm add jest
+
+# Also install jest "globally" (this is so we can run the `jest` command)
+npm install -g jest
+```
+#### 3. Run *jest* inside your terminal
 ```
 jest
 ```
