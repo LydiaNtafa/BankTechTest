@@ -1,6 +1,10 @@
 class BankAccount {
     #statement = [];
     #balance = 0;
+
+    #balanceCalculation(amount) {
+        this.#balance = amount + this.#balance;
+    }
     
     printStatement() {
         if (this.#statement.length === 0){
@@ -10,7 +14,7 @@ class BankAccount {
     }
 
     deposit(amount) {
-        this.#balance = amount + this.#balance;
+        this.#balanceCalculation(amount)
         const action = `05/10/2023 || || ${amount.toFixed(2)} || ${this.#balance.toFixed(2)}`;
         this.#statement.push(action);
         return `Transaction complete. New account balance: ${this.#balance.toFixed(2)}`
