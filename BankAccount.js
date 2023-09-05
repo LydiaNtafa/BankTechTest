@@ -15,8 +15,8 @@ class BankAccount {
     }
 
     deposit(amount) {
-        this.#balanceCalculation(amount)
-        var currentDate = (new Date()).toLocaleDateString('en-GB')
+        this.#balanceCalculation(amount);
+        var currentDate = (new Date()).toLocaleDateString('en-GB');
         const action = `${currentDate} || || ${amount.toFixed(2)} || ${this.#balance.toFixed(2)}`;
         this.#statement.push(action);
         return `Transaction complete. New account balance: ${this.#balance.toFixed(2)}`
@@ -26,7 +26,10 @@ class BankAccount {
         if (amount > this.#balance) {
             return `Cannot complete this transaction due to insufficient balance. Account balance: ${this.#balance.toFixed(2)}`
         }
-        this.#balanceCalculation(-amount)
+        this.#balanceCalculation(-amount);
+        var currentDate = (new Date()).toLocaleDateString('en-GB');
+        const action = `${currentDate} || ${amount.toFixed(2)} || || ${this.#balance.toFixed(2)}`;
+        this.#statement.push(action);
         return `Transaction complete. New account balance: ${this.#balance.toFixed(2)}`
         
     }
