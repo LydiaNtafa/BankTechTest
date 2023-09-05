@@ -9,7 +9,7 @@ describe('Bank Account', () => {
     });
     
     describe('deposit', () => {
-        // needs edge cases 
+        // need to test for empty entry or string
         it('allows the user to make a deposit of 1000', () => {
             const Account = new BankAccount();
             expect(Account.deposit(1000)).toStrictEqual("Transaction complete. New account balance: 1000.00")
@@ -29,7 +29,7 @@ describe('Bank Account', () => {
     })
     
     describe('withdraw', () => {
-        // needs edge cases
+        // need to test for empty entry or string
         it('does not allow withdrawals if balance is 0', () => {
             const Account = new BankAccount();
             expect(Account.withdraw(1000)).toStrictEqual("Cannot complete this transaction due to insufficient balance. Account balance: 0.00")

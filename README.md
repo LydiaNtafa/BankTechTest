@@ -23,8 +23,10 @@ Reading the acceptance criteria I have decided that:
 - 4d. go back to 4a until all criteria and cases are met
 5. Run the usage example given in the acceptance criteria to make sure that the specifications are met exactly.
 
-## How to Set Up Your Machine to be able to Run this Program
+#### Code Structure:
+<!-- Describe how you structured your code. Why did you do it this way? -->
 
+## How to Set Up Your Machine to be able to Run this Program
 ### 1. Install Node
 If you haven't already have` Node.js` installed on your machine please follow the steps below.
 First you will need to install `nvm` - the Node Version Manager.
@@ -112,10 +114,8 @@ npm add jest
 # Also install jest "globally" (this is so we can run the `jest` command)
 npm install -g jest
 ```
-#### 3. Run *jest* inside your terminal
+#### 3. Run jest inside your terminal
 ```
 jest
 ```
-
-
-[screenshot of the test coverage]
+<!-- added when all tests are done [screenshot of the test coverage] -->

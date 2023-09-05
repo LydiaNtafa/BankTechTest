@@ -8,14 +8,14 @@ class BankAccount {
     }
 
     #createTransaction(transaction, amount) {
-        const currentDate = (new Date()).toLocaleDateString('en-GB');
+        const todaysDate = (new Date()).toLocaleDateString('en-GB');
         var action = ""
         if (transaction === "deposit") {
             this.#balanceCalculation(amount);
-            action = `${currentDate} || ${amount.toFixed(2)} || || ${this.#balance.toFixed(2)}`;
+            action = `${todaysDate} || ${amount.toFixed(2)} || || ${this.#balance.toFixed(2)}`;
         } else {
             this.#balanceCalculation(-amount);
-            action = `${currentDate} || || ${amount.toFixed(2)} || ${this.#balance.toFixed(2)}`;
+            action = `${todaysDate} || || ${amount.toFixed(2)} || ${this.#balance.toFixed(2)}`;
         }
         this.#statement.push(action);
         return `Transaction complete. New account balance: ${this.#balance.toFixed(2)}`
