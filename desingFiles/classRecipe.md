@@ -15,7 +15,7 @@ nouns: money, bank account, bank statement, deposits, withdraws, dates, amount, 
 verbs: save/deposit, use/withdraw, keep track, print
 
 # Class Diagram
-! [Class Diagram] (BankAccountDiagram.png)
+![Class Diagram](BankAccountDiagram.png)
 
 # Examples as Unit Tests
 ```

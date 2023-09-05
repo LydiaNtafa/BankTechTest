@@ -11,14 +11,12 @@ Reading the acceptance criteria I have decided that:
 **Writing the [class recipe](desingFiles/classRecipe.md)**
 1. Created User Stories based on specifications.
 2. Created a [class diagram](desingFiles/BankAccountDiagram.png) using the nouns and verbs extracted from the user stories.
-3. Created [Examples as Unit Tests](BankTechTest/desingFiles
-/classRecipe.md#Examples-as-Unit-Tests)
+3. Created [Examples as Unit Tests](desingFiles/classRecipe.md#examples-as-unit-tests)
 - 3a. create an example as a unit test
 - 3b. encode the example
 - 3c. implement the behaviour (red-green-refactor)
 - 3d. go back to 3a until all criteria and cases are met
-4. Created [Examples as intergation Tests](BankTechTest/desingFiles
-/classRecipe.md#Examples-as-Intergation-Tests)
+4. Created [Examples as intergation Tests](desingFiles/classRecipe.md#examples-as-intergation-tests)
 - 4a. create an example as an intergration test
 - 4b. encode the example
 - 4c. implement the behaviour (red-green-refactor)
