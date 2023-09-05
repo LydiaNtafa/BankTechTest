@@ -33,8 +33,15 @@ date || credit || debit || balance
 ```
 When a new account is created 
 the user can make a deposit
-and receive a confirmation message with the new account balance
-*confirmation message is an assumption on dev's part and can easily be changed/deleted*
+and receive a confirmation message "Transaction complete. New account balance: <balance>"
+*the confirmation message is an assumption on dev's part and can easily be changed/deleted*
+```
+
+```
+When a new account is created 
+the user cannot make a withdrawal (since the balance = 0)
+and will receive an error message "Cannot complete this transaction due to insufficient balance. Account balance: <balance>"
+*the error message is an assumption on dev's part and can easily be changed/deleted*
 ```
 
 # Examples as Intergation Tests

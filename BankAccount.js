@@ -22,6 +22,10 @@ class BankAccount {
         return `Transaction complete. New account balance: ${this.#balance.toFixed(2)}`
     }
 
+    withdrawal(amount){
+        return `Cannot complete this transaction due to insufficient balance. Account balance: ${this.#balance.toFixed(2)}`
+    }
+
 };
 
 module.exports = BankAccount;
