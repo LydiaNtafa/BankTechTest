@@ -8,7 +8,7 @@ describe('Bank Account', () => {
 
     it('allows the user to make a deposit', () => {
         const Account = new BankAccount();
-        expect(Account.deposit(1000)).toStrictEqual("Transaction complete. New Account balance: 1000.00")
+        expect(Account.deposit(1000)).toStrictEqual("Transaction complete. New account balance: 1000.00")
     });
 });
 
