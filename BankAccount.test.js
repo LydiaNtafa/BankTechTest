@@ -28,17 +28,17 @@ describe('Bank Account', () => {
         });
     })
     
-    describe('withdrawal', () => {
+    describe('withdraw', () => {
         // needs edge cases
         it('does not allow withdrawals if balance is 0', () => {
             const Account = new BankAccount();
-            expect(Account.withdrawal(1000)).toStrictEqual("Cannot complete this transaction due to insufficient balance. Account balance: 0.00")
+            expect(Account.withdraw(1000)).toStrictEqual("Cannot complete this transaction due to insufficient balance. Account balance: 0.00")
         });
 
         it('allows a withdrawal of 100 if balance is 1000', () => {
             const Account = new BankAccount();
             Account.deposit(1000);
-            expect(Account.withdrawal(100)).toStrictEqual('Transaction complete. New account balance: 900.00')
+            expect(Account.withdraw(100)).toStrictEqual('Transaction complete. New account balance: 900.00')
         });
 
     })
@@ -47,7 +47,7 @@ describe('Bank Account', () => {
         const Account = new BankAccount();
         Account.deposit(1000);
         Account.deposit(2000);
-        Account.withdrawal(500);
+        Account.withdraw(500);
         todaysDate = (new Date()).toLocaleDateString('en-GB');
         expect(Account.printStatement()).toStrictEqual(`date || credit || debit || balance\n`+
         `${todaysDate} || || 500.00 || 2500.00\n`+

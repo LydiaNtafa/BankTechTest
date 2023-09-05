@@ -33,7 +33,7 @@ class BankAccount {
         return this.#createTransaction("deposit", amount);
     }
 
-    withdrawal(amount){
+    withdraw(amount){
         if (amount > this.#balance) {
             return `Cannot complete this transaction due to insufficient balance.`+
             ` Account balance: ${this.#balance.toFixed(2)}`

@@ -63,7 +63,7 @@ wrong, have a look at the [troubleshooting
 section](https://github.com/nvm-sh/nvm#troubleshooting-on-macos) or reach out to someone
 for help.
 
-<!-- MIGHT NOT NEED TO DO THIS IF I UPLOAD WITH package.JSON -->
+
 ### 2. Initialise Depedencies
 Make sure you are on the main project directory.
 ```bash
@@ -82,14 +82,27 @@ $ npm install -g jest
 ## How to Run this Programm and its Tests 
 
 ### 1. Run the Program
-<!-- #### 1. RUN node <name>.js
-1a. may need to import function (?)
-2. create a new account instance (not with a client name,maybe <account1>)
-#### AVAILABLE functions (withdraw, deposit, viewStatement)
+1. Your should now be able to type node inside your terminal, to launch the node REPL:
+```
+$ node
+Welcome to Node.js v16.6.0.
+Type ".help" for more information.
+> 
+```
+2. import the class by typing:
+```
+const BankAccount = require("./BankAccount");
+```
+3. now you can create a new bank accounts. For example:
+```
+const Account1 = new BankAccount();
+const Account2 = new BankAccount();
+```
+#### Avaiable functions (withdraw, deposit, viewStatement)
 note about format?
 
 Note about how to exit Node
--->
+
 
 #### screenshots of criteria being met
 
