@@ -12,10 +12,10 @@ class BankAccount {
         var action = ""
         if (transaction === "deposit") {
             this.#balanceCalculation(amount);
-            action = `${currentDate} || || ${amount.toFixed(2)} || ${this.#balance.toFixed(2)}`;
+            action = `${currentDate} || ${amount.toFixed(2)} || || ${this.#balance.toFixed(2)}`;
         } else {
             this.#balanceCalculation(-amount);
-            action = `${currentDate} || ${amount.toFixed(2)} || || ${this.#balance.toFixed(2)}`;
+            action = `${currentDate} || || ${amount.toFixed(2)} || ${this.#balance.toFixed(2)}`;
         }
         this.#statement.push(action);
         return `Transaction complete. New account balance: ${this.#balance.toFixed(2)}`

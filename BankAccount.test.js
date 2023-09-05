@@ -24,7 +24,7 @@ describe('Bank Account', () => {
             const Account = new BankAccount();
             Account.deposit(1000);
             todaysDate = (new Date()).toLocaleDateString('en-GB');
-            expect(Account.printStatement()).toStrictEqual(`date || credit || debit || balance\n`+`${todaysDate} || || 1000.00 || 1000.00`)
+            expect(Account.printStatement()).toStrictEqual(`date || credit || debit || balance\n`+`${todaysDate} || 1000.00 || || 1000.00`)
         });
     })
     
@@ -45,12 +45,14 @@ describe('Bank Account', () => {
     
     it('shows a deposit and a withdrawal on the printed statement', () => {
         const Account = new BankAccount();
-        Account.deposit(1200);
+        Account.deposit(1000);
+        Account.deposit(2000);
         Account.withdrawal(500);
         todaysDate = (new Date()).toLocaleDateString('en-GB');
         expect(Account.printStatement()).toStrictEqual(`date || credit || debit || balance\n`+
-        `${todaysDate} || 500.00 || || 700.00\n`+
-        `${todaysDate} || || 1200.00 || 1200.00`)
+        `${todaysDate} || || 500.00 || 2500.00\n`+
+        `${todaysDate} || 2000.00 || || 3000.00\n`+
+        `${todaysDate} || 1000.00 || || 1000.00`)
     });
 
 });
