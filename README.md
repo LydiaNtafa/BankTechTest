@@ -25,17 +25,15 @@ Reading the [specification](specification.md) I have decided that :
 
 #### Code Structure:
 The class BankAccount has 2 private fields:
-<#balance> and <#statement>
+<#balance> and <#statement> 
 so every instance of the class starts with those 2 variables initialised to 0 and [], and they can only be accessed and changed within the class.
 
 The class BankAccount has 2 private methods:
-<#balanceCalculation(amount)> and <#createTransaction(transaction, amount)>
+<#balanceCalculation(amount)> and <#createTransaction(transaction, amount)> 
 to help keep the quality of the code high, while ensuring that the sensitive features of the class are secure from misuse.
 
-The class BankAccount has 3 public methods:
-printStatement()
-deposit(amount)
-withdraw(amount)
+The class BankAccount has 3 public methods: 
+printStatement(), deposit(amount) and withdraw(amount)
 
 All the transactions made are stored within the <#statement> array with the date of the transaction that is calculated by obtaining the current date and formatting it as a string using the (English - United Kingdom) locale 
 
