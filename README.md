@@ -1,7 +1,7 @@
 # Bank Tech Test - Lydia Ntafa
 
 ## Approaching the task and planning the program:
-Reading the acceptance criteria I have decided that:
+Reading the [specification]|(specification.md) I have decided that:
 * This will be a single-class program, as it needs to have the ability to store the data in memory (probably in an instance of a BankAccount class) but currently does not have a need for more classes.
 * The programm will be written in JavaScript and will be tested with Jest.
 * The class will be storing the transactions within an array.
@@ -24,7 +24,21 @@ Reading the acceptance criteria I have decided that:
 5. Run the usage example given in the acceptance criteria to make sure that the specifications are met exactly.
 
 #### Code Structure:
-<!-- Describe how you structured your code. Why did you do it this way? -->
+The class BankAccount has 2 private fields:
+<#balance> and <#statement>
+so every instance of the class starts with those 2 variables initialised to 0 and [], and they can only be accessed and changed within the class.
+
+The class BankAccount has 2 private methods:
+<#balanceCalculation(amount)> and <#createTransaction(transaction, amount)>
+to help keep the quality of the code high, while securing that the sensitive fetures of the class are secure from misuse.
+
+The class BankAccount has 3 public methods:
+printStatement()
+deposit(amount)
+withdraw(amount)
+
+All the transactions made are stored within the <#statement> array with the date of the transaction that is caclulated by obtaining the current date and format it as a string using the (English - United Kingdom) locale 
+
 
 ## How to Set Up Your Machine to be able to Run this Program
 ### 1. Install Node
