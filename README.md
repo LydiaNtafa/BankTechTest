@@ -130,4 +130,6 @@ npm install -g jest
 ```
 jest
 ```
-<!-- added when all tests are done [screenshot of the test coverage] -->
+Here you can find a [Screenshot of Test Coverage](desingFiles/Screenshot-test-coverage.png)
+
+
