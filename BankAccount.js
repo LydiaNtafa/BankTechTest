@@ -30,6 +30,9 @@ class BankAccount {
     }
 
     deposit(amount) {
+        if ( amount == null) {
+            return "Please enter the amount you want to deposit"
+        }
         return this.#createTransaction("deposit", amount);
     }
 

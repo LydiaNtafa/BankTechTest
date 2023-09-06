@@ -26,6 +26,11 @@ describe('Bank Account', () => {
             todaysDate = (new Date()).toLocaleDateString('en-GB');
             expect(Account.printStatement()).toStrictEqual(`date || credit || debit || balance\n`+`${todaysDate} || 1000.00 || || 1000.00`)
         });
+
+        it('prints an error message if the input is empty', () => {
+            const Account = new BankAccount();
+            expect(Account.deposit()).toStrictEqual("Please enter the amount you want to deposit")
+        });
     })
     
     describe('withdraw', () => {
