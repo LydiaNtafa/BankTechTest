@@ -32,7 +32,8 @@ class BankAccount {
     deposit(amount) {
         if ( amount == null) {
             return "Please enter the amount you want to deposit"
-        } else if (typeof amount !='number') {
+        } 
+        if (typeof amount !='number') {
             return "Input type needs to be integer or float"
         }
         return this.#createTransaction("deposit", amount);
@@ -40,7 +41,10 @@ class BankAccount {
 
     withdraw(amount){
         if ( amount == null) {
-            return "Please enter the amount you want to deposit"
+            return "Please enter the amount you want to withdraw"
+        } 
+        if (typeof amount !='number') {
+            return "Input type needs to be integer or float"
         }
         if (amount > this.#balance) {
             return `Cannot complete this transaction due to insufficient balance.`+

@@ -51,7 +51,12 @@ describe('Bank Account', () => {
 
         it('prints an error message if the input is empty', () => {
             const Account = new BankAccount();
-            expect(Account.withdraw()).toStrictEqual("Please enter the amount you want to deposit")
+            expect(Account.withdraw()).toStrictEqual("Please enter the amount you want to withdraw")
+        });
+
+        it('prints an error message if the input is not a number', () => {
+            const Account = new BankAccount();
+            expect(Account.withdraw("100")).toStrictEqual("Input type needs to be integer or float")
         });
 
     })
