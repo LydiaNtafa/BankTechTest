@@ -9,7 +9,6 @@ describe('Bank Account', () => {
     });
     
     describe('deposit', () => {
-        // need to test for empty entry or string
         it('allows the user to make a deposit of 1000', () => {
             const Account = new BankAccount();
             expect(Account.deposit(1000)).toStrictEqual("Transaction complete. New account balance: 1000.00")
@@ -30,6 +29,11 @@ describe('Bank Account', () => {
         it('prints an error message if the input is empty', () => {
             const Account = new BankAccount();
             expect(Account.deposit()).toStrictEqual("Please enter the amount you want to deposit")
+        });
+
+        it('prints an error message if the input is not a number', () => {
+            const Account = new BankAccount();
+            expect(Account.deposit("100")).toStrictEqual("Input type needs to be integer or float")
         });
     })
     

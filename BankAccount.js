@@ -32,6 +32,8 @@ class BankAccount {
     deposit(amount) {
         if ( amount == null) {
             return "Please enter the amount you want to deposit"
+        } else if (typeof amount !='number') {
+            return "Input type needs to be integer or float"
         }
         return this.#createTransaction("deposit", amount);
     }
