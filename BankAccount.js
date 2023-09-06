@@ -39,6 +39,9 @@ class BankAccount {
     }
 
     withdraw(amount){
+        if ( amount == null) {
+            return "Please enter the amount you want to deposit"
+        }
         if (amount > this.#balance) {
             return `Cannot complete this transaction due to insufficient balance.`+
             ` Account balance: ${this.#balance.toFixed(2)}`

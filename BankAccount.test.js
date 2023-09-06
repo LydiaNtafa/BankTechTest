@@ -38,7 +38,6 @@ describe('Bank Account', () => {
     })
     
     describe('withdraw', () => {
-        // need to test for empty entry or string
         it('does not allow withdrawals if balance is 0', () => {
             const Account = new BankAccount();
             expect(Account.withdraw(1000)).toStrictEqual("Cannot complete this transaction due to insufficient balance. Account balance: 0.00")
@@ -48,6 +47,11 @@ describe('Bank Account', () => {
             const Account = new BankAccount();
             Account.deposit(1000);
             expect(Account.withdraw(100)).toStrictEqual('Transaction complete. New account balance: 900.00')
+        });
+
+        it('prints an error message if the input is empty', () => {
+            const Account = new BankAccount();
+            expect(Account.withdraw()).toStrictEqual("Please enter the amount you want to deposit")
         });
 
     })
