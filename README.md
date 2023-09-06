@@ -1,7 +1,7 @@
 # Bank Tech Test - Lydia Ntafa
 
 ## Approaching the task and planning the program:
-Reading the [specification](specification.md) I have decided that:
+Reading the [specification](specification.md) I have decided that :
 * This will be a single-class program, as it needs to have the ability to store the data in memory (probably in an instance of a BankAccount class) but currently does not have a need for more classes.
 * The program will be written in JavaScript and will be tested with Jest.
 * The class will be storing the transactions within an array.
