@@ -53,6 +53,6 @@ class BankAccount {
         return this.#createTransaction('withdrawal', amount);
     }
 
-};
+}
 
 module.exports = BankAccount;
