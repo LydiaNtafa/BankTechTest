@@ -2,10 +2,11 @@
 
 ## Approaching the task and planning the program:
 Reading the [specification](specification.md) I have decided that :
-* This will be a single-class program, as it needs to have the ability to store the data in memory (probably in an instance of a BankAccount class) but currently does not have a need for more classes.
+* This will be a multi-class program, as it needs to have the ability to store the data in memory. 
+    * The **main class** will serve as a *BankAccount*, it will initialise with 0 balance and it will have public classes for the user to interact with like makeANewTransaction and printStetement.
+    * Another class will be named *Transaction*, every instance of this class will represent a different transaction made (like depost or withdraw) to manage the data being recorded.
+    * The last class will be *BankStatement*, and it will be managing the output format and displaying the data to the user. 
 * The program will be written in JavaScript and will be tested with Jest.
-* The class will be storing the transactions within an array.
-* The class will be have at least 3 public methods(deposit(), withdraw(), printStatement())
 
 #### My design process:
 **Writing the [class recipe](desingFiles/classRecipe.md)**

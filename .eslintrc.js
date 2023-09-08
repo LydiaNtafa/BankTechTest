@@ -21,6 +21,7 @@ module.exports = {
     "parserOptions": {
         "ecmaVersion": "latest"
     },
+    "ignorePatterns": ["*.test.js"],
     "rules": {
     }
 }
