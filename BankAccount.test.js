@@ -1,4 +1,5 @@
 const BankAccount = require("./BankAccount");
+const originalDate = Date;
 
 describe('Bank Account', () => {
     describe('printStatement', () => {
@@ -20,10 +21,15 @@ describe('Bank Account', () => {
         });
     
         it('shows a deposit on the printed statement', () => {
+            global.Date = class extends Date {
+                constructor() {
+                    super('2019-12-12');
+                }
+            };
             const Account = new BankAccount();
             Account.deposit(1000);
-            todaysDate = (new Date()).toLocaleDateString('en-GB');
-            expect(Account.printStatement()).toStrictEqual(`date || credit || debit || balance\n`+`${todaysDate} || 1000.00 || || 1000.00`)
+            expect(Account.printStatement()).toStrictEqual(`date || credit || debit || balance\n`+`12/12/2019 || 1000.00 || || 1000.00`)
+            global.Date = originalDate;
         });
 
         it('prints an error message if the input is empty', () => {
@@ -63,15 +69,31 @@ describe('Bank Account', () => {
     
     it('shows a deposit and a withdrawal on the printed statement', () => {
         const Account = new BankAccount();
+        global.Date = class extends Date {
+            constructor() {
+                super('2023-01-10'); 
+            }
+        };
         Account.deposit(1000);
+        global.Date = originalDate;
+        global.Date = class extends Date {
+            constructor() {
+                super('2023-01-13');
+            }
+        };
         Account.deposit(2000);
+        global.Date = originalDate;
+        global.Date = class extends Date {
+            constructor() {
+                super('2023-01-14'); 
+            }
+        };
         Account.withdraw(500);
-        todaysDate = (new Date()).toLocaleDateString('en-GB');
+        global.Date = originalDate;
         expect(Account.printStatement()).toStrictEqual(`date || credit || debit || balance\n`+
-        `${todaysDate} || || 500.00 || 2500.00\n`+
-        `${todaysDate} || 2000.00 || || 3000.00\n`+
-        `${todaysDate} || 1000.00 || || 1000.00`)
+        `14/01/2023 || || 500.00 || 2500.00\n`+
+        `13/01/2023 || 2000.00 || || 3000.00\n`+
+        `10/01/2023 || 1000.00 || || 1000.00`)
     });
 
 });
-
