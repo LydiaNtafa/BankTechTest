@@ -3,8 +3,8 @@
 ## Approaching the task and planning the program:
 Reading the [specification](specification.md) I have decided that :
 * This will be a multi-class program, as it needs to have the ability to store the data in memory. 
-    * The **main class** will serve as a *BankAccount*, it will initialise with 0 balance and it will have public classes for the user to interact with like makeANewTransaction and printStetement.
-    * Another class will be named *Transaction*, every instance of this class will represent a different transaction made (like depost or withdraw) to manage the data being recorded.
+    * The **main class** will serve as a *BankAccount*, it will initialize with 0 balance and it will have public classes for the user to interact with like makeANewTransaction and printStetement.
+    * Another class will be named *Transaction*, every instance of this class will represent a different transaction made (like deposit or withdraw) to manage the data being recorded.
     * The last class will be *BankStatement*, and it will be managing the output format and displaying the data to the user. 
 * The program will be written in JavaScript and will be tested with Jest.
 
@@ -12,7 +12,8 @@ Reading the [specification](specification.md) I have decided that :
 **Writing the [class recipe](desingFiles/classRecipe.md)**
 1. Created User Stories based on specifications.
 2. Created a [class diagram](desingFiles/BankAccountDiagram.png) using the nouns and verbs extracted from the user stories.
-3. Created [Examples as Unit Tests](desingFiles/classRecipe.md#examples-as-unit-tests)
+3. Created a [sequence diagram](desingFiles/BankSequenceDiagram.svg) to visualize how the classes will interact with each other.
+4. Created [Examples as Unit Tests](desingFiles/classRecipe.md#examples-as-unit-tests)
 - 3a. Create an example as a unit test
 - 3b. encode the example
 - 3c. implement the behavior (red-green-refactor)
@@ -27,7 +28,7 @@ Reading the [specification](specification.md) I have decided that :
 #### Code Structure: **NEEDS TO BE CHANGED TO REFLECT REFACTORING**
 The class BankAccount has 2 private fields:
 <#balance> and <#statement> 
-so every instance of the class starts with those 2 variables initialised to 0 and [], and they can only be accessed and changed within the class.
+so every instance of the class starts with those 2 variables initialized to 0 and [], and they can only be accessed and changed within the class.
 
 The class BankAccount has 2 private methods:
 <#balanceCalculation(amount)> and <#createTransaction(transaction, amount)> 
