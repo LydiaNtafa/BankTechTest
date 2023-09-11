@@ -24,7 +24,7 @@ Reading the [specification](specification.md) I have decided that :
 - 4d. Go back to 4a until all criteria and cases are met
 5. Run the usage example given in the acceptance criteria to make sure that the specifications are met exactly.
 
-#### Code Structure:
+#### Code Structure: **NEEDS TO BE CHANGED TO REFLECT REFACTORING**
 The class BankAccount has 2 private fields:
 <#balance> and <#statement> 
 so every instance of the class starts with those 2 variables initialised to 0 and [], and they can only be accessed and changed within the class.
