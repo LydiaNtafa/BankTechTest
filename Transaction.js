@@ -8,10 +8,16 @@ class Transaction {
     }
 
     format() {
-        if (this.transactionType === "deposit") {
-            return `${this.date} || ${this.amount.toFixed(2)} || || ${this.newBalance.toFixed(2)}`
+        let text = "";
+        switch(this.transactionType) {
+            case "deposit":
+                text = `${this.date} || ${this.amount.toFixed(2)} || || ${this.newBalance.toFixed(2)}`;
+                break;
+            case "withdraw":
+                text = `${this.date} || || ${this.amount.toFixed(2)} || ${this.newBalance.toFixed(2)}`;
+                break;
         }
-        return `${this.date} || || ${this.amount.toFixed(2)} || ${this.newBalance.toFixed(2)}`
+        return text;
     }
 }
 

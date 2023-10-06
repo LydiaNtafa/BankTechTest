@@ -1,7 +1,5 @@
 class BankAccount {
 
-//! CHANGE CODE STRUCTURE ON README BEFORE SUBMITTING
-
     #statement = [];
     #balance = 0;
     
