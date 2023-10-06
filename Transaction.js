@@ -1,16 +1,16 @@
 class Transaction {
     constructor(transactionType, amount, newBalance) {
-        this.date = this.#todaysDateAsString();
+        const todaysDateAsString = (new Date()).toLocaleDateString('en-GB');
+        this.date = todaysDateAsString;
         this.amount = amount;
         this.newBalance = newBalance;
-    }
-
-    #todaysDateAsString() {
-        return (new Date()).toLocaleDateString('en-GB');
+        this.transactionType = transactionType;
     }
 
     format() {
-        return `${this.date} || ${this.amount.toFixed(2)} || || ${this.newBalance.toFixed(2)}`
+        if (this.transactionType === "deposit") {
+            return `${this.date} || ${this.amount.toFixed(2)} || || ${this.newBalance.toFixed(2)}`
+        }
     }
 }
 
