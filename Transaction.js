@@ -11,6 +11,7 @@ class Transaction {
         if (this.transactionType === "deposit") {
             return `${this.date} || ${this.amount.toFixed(2)} || || ${this.newBalance.toFixed(2)}`
         }
+        return `${this.date} || || ${this.amount.toFixed(2)} || ${this.newBalance.toFixed(2)}`
     }
 }
 
