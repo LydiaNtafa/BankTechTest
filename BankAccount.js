@@ -54,6 +54,5 @@ class BankAccount {
     }
 
 }
-//! CHANGE CODE STRUCTURE ON README BEFORE SUBMITTING
 
 module.exports = BankAccount;
