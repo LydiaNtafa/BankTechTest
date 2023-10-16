@@ -1,56 +1,56 @@
-class BankAccount {
+const Transaction = require("./Transaction");
 
-    #statement = [];
+class BankAccount {
     #balance = 0;
+    #transactions = []
     
     #balanceCalculation(amount) {
         this.#balance = amount + this.#balance;
     }
-
-    #createTransaction(transaction, amount) {
-        const todaysDate = (new Date()).toLocaleDateString('en-GB');
-        var action = ""
-        if (transaction === "deposit") {
-            this.#balanceCalculation(amount);
-            action = `${todaysDate} || ${amount.toFixed(2)} || || ${this.#balance.toFixed(2)}`;
-        } else {
-            this.#balanceCalculation(-amount);
-            action = `${todaysDate} || || ${amount.toFixed(2)} || ${this.#balance.toFixed(2)}`;
-        }
-        this.#statement.push(action);
-        return `Transaction complete. New account balance: ${this.#balance.toFixed(2)}`
-    }
     
     printStatement() {
         const header = "date || credit || debit || balance"
-        if (this.#statement.length === 0){
+        if (this.#transactions.length === 0){
             return header
+        } else {
+            const reversedArray = [];
+            this.#transactions.slice().reverse().forEach(transaction => reversedArray.push(transaction.format()));
+            this.#transactions = [];
+            return header+`\n`+`${reversedArray.join('\n')}`;
         }
-        return header+`\n`+`${this.#statement.reverse().join('\n')}`;
     }
 
     deposit(amount) {
         if ( amount == null) {
             return "Please enter the amount you want to deposit"
         } 
-        if (typeof amount !='number') {
+        else if (typeof amount !='number') {
             return "Input type needs to be integer or float"
         }
-        return this.#createTransaction("deposit", amount);
+        else {
+            this.#balanceCalculation(amount);
+            this.#transactions.push(new Transaction("deposit", amount, this.#balance));
+            return `Transaction complete. New account balance: ${this.#balance.toFixed(2)}`
+        }
     }
 
     withdraw(amount){
         if ( amount == null) {
             return "Please enter the amount you want to withdraw"
         } 
-        if (typeof amount !='number') {
+        else if (typeof amount !='number') {
             return "Input type needs to be integer or float"
         }
-        if (amount > this.#balance) {
+        else if (amount > this.#balance) {
             return `Cannot complete this transaction due to insufficient balance.`+
             ` Account balance: ${this.#balance.toFixed(2)}`
         }
-        return this.#createTransaction('withdrawal', amount);
+        else {
+            this.#balanceCalculation(-amount);
+            this.#transactions.push(new Transaction("withdraw", amount, this.#balance));
+            return `Transaction complete. New account balance: ${this.#balance.toFixed(2)}`
+        }
+        
     }
 
 }
