@@ -3,6 +3,7 @@ const Transaction = require("./Transaction");
 class BankAccount {
     #balance = 0;
     #transactions = []
+    #statemanets = []
     
     #balanceCalculation(amount) {
         if ((this.#balance + amount) < 0) {
