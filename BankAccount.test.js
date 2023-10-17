@@ -34,7 +34,7 @@ describe('Bank Account', () => {
 
         it('prints an error message if the input is empty', () => {
             const Account = new BankAccount();
-            expect(Account.deposit()).toStrictEqual("Please enter the amount you want to deposit")
+            expect(Account.deposit()).toStrictEqual("Please enter the amount for the transaction")
         });
 
         it('prints an error message if the input is not a number', () => {
@@ -44,9 +44,9 @@ describe('Bank Account', () => {
     })
     
     describe('withdraw', () => {
-        it('does not allow withdrawals if balance is 0', () => {
+        it('does not allow withdrawals if balance is 0', async () => {
             const Account = new BankAccount();
-            expect(Account.withdraw(1000)).toStrictEqual("Cannot complete this transaction due to insufficient balance. Account balance: 0.00")
+            await expect(Account.withdraw(1000)).toStrictEqual("Cannot complete this transaction due to insufficient balance. Account balance: 0.00")
         });
 
         it('allows a withdrawal of 100 if balance is 1000', () => {
@@ -57,7 +57,7 @@ describe('Bank Account', () => {
 
         it('prints an error message if the input is empty', () => {
             const Account = new BankAccount();
-            expect(Account.withdraw()).toStrictEqual("Please enter the amount you want to withdraw")
+            expect(Account.withdraw()).toStrictEqual("Please enter the amount for the transaction")
         });
 
         it('prints an error message if the input is not a number', () => {

@@ -8,16 +8,16 @@ class Transaction {
     }
 
     format() {
-        let text = "";
+        let transactionData = "";
         switch(this.transactionType) {
             case "deposit":
-                text = `${this.date} || ${this.amount} || || ${this.newBalance}`;
+                transactionData = `${this.date} || ${this.amount} || || ${this.newBalance}`;
                 break;
             case "withdraw":
-                text = `${this.date} || || ${this.amount} || ${this.newBalance}`;
+                transactionData = `${this.date} || || ${this.amount} || ${this.newBalance}`;
                 break;
         }
-        return text;
+        return transactionData;
     }
 }
 
