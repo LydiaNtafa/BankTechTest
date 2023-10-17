@@ -51,7 +51,7 @@ class BankAccount {
         } catch (error) {
             return error.message;
         }
-        this.#transactions.push(new Transaction("withdraw", amount, this.#balance));
+        this.#transactions.push(new Transaction("withdrawal", amount, this.#balance));
         return `Transaction complete. New account balance: ${this.#balance.toFixed(2)}`
     }
         

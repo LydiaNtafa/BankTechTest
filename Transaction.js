@@ -13,7 +13,7 @@ class Transaction {
             case "deposit":
                 transactionData = `${this.date} || ${this.amount} || || ${this.newBalance}`;
                 break;
-            case "withdraw":
+            case "withdrawal":
                 transactionData = `${this.date} || || ${this.amount} || ${this.newBalance}`;
                 break;
         }

@@ -30,7 +30,7 @@ describe('Transaction', () => {
                 super('2000-01-01');
             }
         };
-        const transaction = new Transaction("withdraw", 666.6, 333.4);
+        const transaction = new Transaction("withdrawal", 666.6, 333.4);
         expect(transaction.format()).toStrictEqual(`01/01/2000 || || 666.60 || 333.40`);
         global.Date = originalDate;
     })
