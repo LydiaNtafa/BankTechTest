@@ -29,7 +29,6 @@ class BankAccount {
         this.#statements.push(statement)
         this.#transactions = [];
         return statement.print()
-
     }
 
     deposit(amount) {
@@ -53,8 +52,6 @@ class BankAccount {
         this.#transactions.push(new Transaction("withdrawal", amount, this.#balance));
         return `Transaction complete. New account balance: ${this.#balance.toFixed(2)}`
     }
-        
-
 }
 
 module.exports = BankAccount;

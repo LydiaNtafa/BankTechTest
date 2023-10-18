@@ -5,7 +5,7 @@ Reading the [specification](specification.md) I have decided that :
 * This will be a multi-class program, as it needs to have the ability to store the data in memory. 
     * The **main class** will serve as a *BankAccount*, it will initialize with 0 balance and it will have public classes for the user to interact with like makeANewTransaction and printStetement.
     * Another class will be named *Transaction*, every instance of this class will represent a different transaction made (like deposit or withdraw) to manage the data being recorded.
-    * The last class will be *BankStatement*, and it will be managing the output format and displaying the data to the user. 
+    * The last class will be *Statement*, and it will be managing the output format and displaying the data to the user. 
 * The program will be written in JavaScript and will be tested with Jest.
 
 #### My design process:
@@ -25,20 +25,21 @@ Reading the [specification](specification.md) I have decided that :
 - 4d. Go back to 4a until all criteria and cases are met
 5. Run the usage example given in the acceptance criteria to make sure that the specifications are met exactly.
 
-#### Code Structure: **NEEDS TO BE CHANGED TO REFLECT REFACTORING**
-The class BankAccount has 2 private fields:
-<#balance> and <#statement> 
-so every instance of the class starts with those 2 variables initialized to 0 and [], and they can only be accessed and changed within the class.
+#### Code Structure:
+The class BankAccount has 3 private fields:
+<#balance> , <#transactions> and <#statements> 
+so every instance of the class starts with those 3 variables initialized to 0 and [], and they can only be accessed and changed within the class.
 
 The class BankAccount has 2 private methods:
-<#balanceCalculation(amount)> and <#createTransaction(transaction, amount)> 
+<#balanceCalculation(amount)> and <#validateAmount(amount)> 
 to help keep the quality of the code high, while ensuring that the sensitive features of the class are secure from misuse.
 
 The class BankAccount has 3 public methods: 
 printStatement(), deposit(amount) and withdraw(amount)
 
-All the transactions made are stored within the <#statement> array with the date of the transaction that is calculated by obtaining the current date and formatting it as a string using the (English - United Kingdom) locale 
+All the transactions made are instances of the class Transaction stored within the <#transactions> array with the date of the transaction that is calculated by obtaining the current date and formatting it as a string using the (English - United Kingdom) locale. 
 
+When the user wants to print their bank statement a new instance of the class Statement that includes the transactions stored in the <#transactions> array, at the time, <#transactions> array will be cleared, theinstance will stored in the <#statements> array and the function will return a string
 
 ## How to Set Up Your Machine to be able to Run this Program
 ### 1. Install Node
