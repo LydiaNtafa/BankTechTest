@@ -9,7 +9,6 @@ class Statement {
             return this.header
         } else {
             const reversedArray = this.transactions.map(transaction => transaction.format()).reverse();
-            this.transactions = [];
             return this.header+`\n`+`${reversedArray.join('\n')}`;
         }
     }

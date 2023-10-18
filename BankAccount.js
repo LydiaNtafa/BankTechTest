@@ -1,9 +1,10 @@
 const Transaction = require("./Transaction");
+const Statement = require("./Statement");
 
 class BankAccount {
     #balance = 0;
     #transactions = []
-    #statemanets = []
+    #statements = []
     
     #balanceCalculation(amount) {
         if ((this.#balance + amount) < 0) {
@@ -24,14 +25,11 @@ class BankAccount {
     }
     
     printStatement() {
-        const header = "date || credit || debit || balance"
-        if (this.#transactions.length === 0){
-            return header
-        } else {
-            const reversedArray = this.#transactions.map(transaction => transaction.format()).reverse();
-            this.#transactions = [];
-            return header+`\n`+`${reversedArray.join('\n')}`;
-        }
+        const statement = new Statement(this.#transactions)
+        this.#statements.push(statement)
+        this.#transactions = [];
+        return statement.print()
+
     }
 
     deposit(amount) {
