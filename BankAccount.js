@@ -14,7 +14,7 @@ class BankAccount {
         }
     }
 
-    #validation(amount) {
+    #validateAmount(amount) {
         if ( amount == null) {
             throw new Error("Please enter the amount for the transaction")
         } 
@@ -36,7 +36,7 @@ class BankAccount {
 
     deposit(amount) {
         try {
-            this.#validation(amount);
+            this.#validateAmount(amount);
             this.#balanceCalculation(amount);
         } catch (error) {
             return error.message;
@@ -47,7 +47,7 @@ class BankAccount {
 
     withdraw(amount) {
         try {
-            this.#validation(amount);
+            this.#validateAmount(amount);
             this.#balanceCalculation(-amount);
         } catch (error) {
             return error.message;
