@@ -5,7 +5,13 @@ class Statement {
     }
 
     print() {
-        return this.header;
+        if (this.transactions.length === 0){
+            return this.header
+        } else {
+            const reversedArray = this.transactions.map(transaction => transaction.format()).reverse();
+            this.transactions = [];
+            return this.header+`\n`+`${reversedArray.join('\n')}`;
+        }
     }
 }
 
